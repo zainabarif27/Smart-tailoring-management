@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Tailor Orders</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/orders.css"/>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="logo">
+      <i class="fa-solid fa-shirt"></i>
+      <div>
+        <h2>SMART TAILOR</h2>
+        <p>SYSTEM</p>
+      </div>
+    </div>
+
+    <ul class="menu">
+
+      <!-- Dashboard -->
+      <li>
+        <a href="dashboard.html">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+      </li>
+
+      <!-- Customers -->
+      <li>
+        <a href="neworder.html">
+          <i class="fa-solid fa-scissors"></i>
+          New order+
+        </a>
+      </li>
+
+      <!-- Measurements -->
+      <li>
+        <a href="measurements.html">
+          <i class="fa-solid fa-ruler"></i>
+          Measurements
+        </a>
+      </li>
+
+      <!-- Orders (ACTIVE PAGE) -->
+      <li class="active">
+        <a href="orders.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Orders
+        </a>
+      </li>
+
+      <!-- Payments -->
+      <li>
+        <a href="payments.html">
+          <i class="fa-solid fa-wallet"></i>
+          Payments
+        </a>
+      </li>
+
+      
+
+      <!-- Settings -->
+      <li>
+        <a href="settings.html">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+      </li>
+
+      <!-- Logout -->
+      <li class="logout">
+        <a href="#" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Logout
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <div class="top-bar">
+      <div>
+        <h2>Customer Orders</h2>
+        <p>Manage tailor customer orders</p>
+      </div>
+
+      <button class="new-order-btn">
+        <i class="fa-solid fa-plus"></i>
+        New Order
+      </button>
+    </div>
+
+    <div class="filters">
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search customer...">
+      </div>
+
+      <select>
+        <option>All Status</option>
+        <option>Pending</option>
+        <option>Stitching</option>
+        <option>Ready</option>
+        <option>Delivered</option>
+      </select>
+
+    </div>
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Dress Type</th>
+            <th>Status</th>
+            <th>Delivery Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- your dynamic JS rows will come here -->
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <script src="js/orders.js"></script>
+</body>
+</html>

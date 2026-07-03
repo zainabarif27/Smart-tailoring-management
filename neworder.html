@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Order - Smart Tailor</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Shared sidebar / layout styles -->
+  <link rel="stylesheet" href="css/orders.css"/>
+  <!-- Page-specific form styles -->
+  <link rel="stylesheet" href="css/neworder.css"/>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="logo">
+      <i class="fa-solid fa-shirt"></i>
+      <div>
+        <h2>SMART TAILOR</h2>
+        <p>SYSTEM</p>
+      </div>
+    </div>
+
+    <ul class="menu">
+
+      <!-- Dashboard -->
+      <li>
+        <a href="dashboard.html">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+      </li>
+
+      <!-- New Order (ACTIVE PAGE) -->
+      <li class="active">
+        <a href="neworder.html">
+          <i class="fa-solid fa-scissors"></i>
+          New order+
+        </a>
+      </li>
+
+      <!-- Measurements -->
+      <li>
+        <a href="measurements.html">
+          <i class="fa-solid fa-ruler"></i>
+          Measurements
+        </a>
+      </li>
+
+      <!-- Orders -->
+      <li>
+        <a href="orders.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Orders
+        </a>
+      </li>
+
+      <!-- Payments -->
+      <li>
+        <a href="payments.html">
+          <i class="fa-solid fa-wallet"></i>
+          Payments
+        </a>
+      </li>
+
+      <!-- Settings -->
+      <li>
+        <a href="settings.html">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+      </li>
+
+      <!-- Logout -->
+      <li class="logout">
+        <a href="#" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Logout
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <div class="form-box">
+
+      <h2>New Order</h2>
+
+      <input id="customerId" readonly placeholder="Customer ID">
+
+      <input id="customerName" placeholder="Customer Name">
+
+      <input id="phone" type="tel" placeholder="Phone Number">
+
+      <input id="address" placeholder="Address">
+
+      <input id="orderDate" type="date">
+
+      <!-- Delivery date calculated silently in JS as order date + 10 days -->
+
+      <button onclick="saveOrder()">Save Order</button>
+
+    </div>
+
+  </div>
+
+  <script src="js/neworder.js"></script>
+
+</body>
+</html>

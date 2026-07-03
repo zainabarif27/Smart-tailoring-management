@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements - Smart Tailor</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/measurements.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-shirt"></i>
+            <div>
+                <h2>SMART TAILOR</h2>
+                <p>SYSTEM</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="neworder.html"><i class="fa-solid fa-scissors"></i> New order+</a></li>
+            <li class="active"><a href="measurements.html"><i class="fa-solid fa-ruler"></i> Measurements</a></li>
+            <li><a href="orders.html"><i class="fa-solid fa-cart-shopping"></i> Orders</a></li>
+            <li><a href="payments.html"><i class="fa-solid fa-wallet"></i> Payments</a></li>
+            
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <div class="top-bar">
+            <div>
+                <h2>Add Measurements</h2>
+                <p>Manage customer measurements professionally</p>
+            </div>
+        </div>
+
+        <div class="form-box">
+
+            <form id="measureForm">
+
+                <div class="form-grid">
+
+                    <!-- CUSTOMER ID -->
+                    <div class="input-box" style="position:relative;">
+                        <label>Customer ID</label>
+                        <input type="text" id="customerId"
+                            placeholder="Enter Customer ID or Phone"
+                            onkeyup="showSuggestions()">
+
+                        <div id="suggestions"></div>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Customer Name</label>
+                        <input type="text" id="customerName">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Dress Type</label>
+                        <input type="text" id="dressType">
+                    </div>
+
+                    <!-- MEASUREMENTS -->
+                    <div class="input-box">
+                        <label>Chest</label>
+                        <input type="number" id="chest">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Shoulder</label>
+                        <input type="number" id="shoulder">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Sleeve Length</label>
+                        <input type="number" id="sleeve">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Neck</label>
+                        <input type="number" id="neck">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Waist</label>
+                        <input type="number" id="waist">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Hip</label>
+                        <input type="number" id="hip">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Thigh</label>
+                        <input type="number" id="thigh">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Knee</label>
+                        <input type="number" id="knee">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Cuff</label>
+                        <input type="number" id="cuff">
+                    </div>
+
+                    <div class="input-box full-width">
+                        <label>Extra Instructions</label>
+                        <textarea id="instructions" rows="4"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" class="save-btn">Save Measurement</button>
+                    <button type="reset" class="reset-btn" onclick="resetForm()">Reset</button>
+                </div>
+
+            </form>
+
+            <!-- ✅ FINAL TOKEN CARD (UPDATED WITH DATES) -->
+            <div id="tokenCard"
+                style="display:none; margin-top:20px; padding:20px; background:#f3d6c1; border-radius:12px; text-align:center;">
+
+                <h2>Order Token</h2>
+
+                <h1 id="tokenNumber">#----</h1>
+
+                <p><b>ID:</b> <span id="tId"></span></p>
+                <p><b>Name:</b> <span id="tName"></span></p>
+                <p><b>Dress:</b> <span id="tDress"></span></p>
+
+                <!-- ⭐ ADDED DATES -->
+                <p><b>Order Date:</b> <span id="tOrderDate"></span></p>
+                <p><b>Delivery Date:</b> <span id="tDeliveryDate"></span></p>
+
+                <p><b>📸 Take Picture of This Token</b></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/measurements.js"></script>
+
+</body>
+</html>
